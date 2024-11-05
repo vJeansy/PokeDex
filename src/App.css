@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+:root {
+	--color-fire: #ff7402;
+	--color-grass: #9bcc50;
+	--color-steel: #9eb7b8;
+	--color-water: #4592c4;
+	--color-psychic: #f366b9;
+	--color-ground: #ab9842;
+	--color-ice: #51c4e7;
+	--color-flying: #3dc7ef;
+	--color-ghost: #4d5b64;
+	--color-normal: #a4acaf;
+	--color-poison: #7e0058;
+	--color-rock: #a38c21;
+	--color-fighting: #d56723;
+	--color-dark: #707070;
+	--color-bug: #729f3f;
+	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+	--color-electric: #bba909;
+	--color-fairy: #fdb9e9;
+	--color-shadow: #7b62a3;
+	--color-unknow: #757575;
+
+	--color-primary: #006d77;
+	--color-primary-hover: #83c5be;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+/* Globales */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Header */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 40px 0;
+}
+
+.logo img {
+	width: 150px;
+}
+
+.logo img:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+header form {
+	display: flex;
+	align-items: center;
+
+	gap: 15px;
+}
+
+.form-group {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	border: 1px solid #555;
+	padding: 15px 20px;
+	border-radius: 25px;
+}
+
+.form-group input {
+	/* padding: 15px 30px; */
+	font-family: inherit;
+	width: 300px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+	background-color: #000;
+	color: #ffffff;
+}
+
+.icon-search {
+	width: 20px;
+	height: 20px;
+	stroke: #797979;
+}
+
+.btn-search {
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	padding: 15px 30px;
+	font-family: inherit;
+	color: #ffffff;
+	background: #06beb6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	cursor: pointer;
+	font-weight: 500;
+	letter-spacing: 2px;
+}
+
+.btn-search:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+	background-color: var(--color-primary-hover);
+	color: #000;
+  transition: all 300ms;
+}
+
+/* Btn Filter */
+.container-filter {
+	display: flex;
+}
+
+.icon-filter {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.icon-filter .icon {
+	width: 30px;
+	height: 30px;
+	stroke: #555;
+}
+
+/* Card List Pokemon */
+.card-list-pokemon {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card-pokemon {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.card-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+	height: 200px;
+
+	transition: all 0.5s;
+}
+
+.card-img:hover{
+	filter: drop-shadow(0 0 4em #333abbaa);
+}
+
+.card-img img {
+	width: 100%;
+	height: 100%;
+}
+
+.card-info {
+	padding: 15px;
+}
+
+.card-info h3 {
+	color: #ffffff;
+}
+
+.pokemon-id {
+	display: block;
+	color: #888;
+	margin-bottom: 15px;
+	color: #ffffff;
+}
+
+.card-types {
+	display: flex;
+	gap: 10px;
+	margin-top: 10px;
+}
+
+.card-types span {
+	font-size: 12px;
+	padding: 5px 20px;
+	border-radius: 5px;
+	color: #fff;
+}
+
+/* Types of Pokemon */
+.water {
+	background: #2980B9;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.grass {
+	background: #11998e;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.poison {
+	background: #c31432;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.fire {
+	background: #f12711;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.bug {
+	background: #000000;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.dragon {
+	background: #40E0D0;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #FF0080, #FF8C00, #40E0D0);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #FF0080, #FF8C00, #40E0D0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.flying {
+	background: #00B4DB;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.ground {
+	background: #636363;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #a2ab58, #636363);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #a2ab58, #636363); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.steel {
+	background: #8e9eab;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #eef2f3, #8e9eab);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #eef2f3, #8e9eab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.psychic {
+	background: #f4c4f3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #fc67fa, #f4c4f3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.ice {
+	background: #B2FEFA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.ghost {
+	background-color: var(--color-ghost);
+}
+
+.normal {
+	background-color: var(--color-normal);
+}
+
+.rock {
+	background: #3C3B3F;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #605C3C, #3C3B3F);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #605C3C, #3C3B3F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.electric {
+	background: #CAC531;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #F3F9A7, #CAC531);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #F3F9A7, #CAC531); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.fighting {
+	background: #fc4a1a;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.fairy {
+	background: #f4c4f3;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #fc67fa, #f4c4f3);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+.dark {
+	background: #232526;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+
+/* Container Filters */
+.container-filters {
+	display: flex;
+	justify-content: center;
+
+	position: fixed;
+	top: 0;
+	left: -300px;
+	width: 250px;
+
+	color: #555;
+	background-color: #f2f2f2;
+	height: 100%;
+	padding-top: 140px;
+	transition: all 0.3s linear;
+}
+
+.container-filters.active {
+	left: 0;
+}
+
+.filter-by-type {
+	display: flex;
+	flex-direction: column;
+
+	gap: 20px;
+}
+
+.filter-by-type span {
+	font-weight: 700;
+	font-size: 22px;
+}
+
+.group-type {
+	display: flex;
+	gap: 10px;
+
+	margin-left: 15px;
+}
+
+.group-type label {
+	cursor: pointer;
+}
+
+/* 
+======================================= 
+Styles of Pokemon Single Page
+======================================= 
+*/
+
+.main-pokemon {
+	display: flex;
+	flex-direction: column;
+
+	margin-top: 100px;
+	margin-bottom: 50px;
+	color: #eeeeee
+}
+
+.header-main-pokemon {
+	margin-top: 20px;
+
+	display: flex;
+	align-items: center;
+
+	position: relative;
+}
+
+.number-pokemon {
+	position: absolute;
+	top: -130px;
+	left: 0;
+
+	font-size: 200px;
+	font-weight: 700;
+	color: #2193b0;  /* fallback for old browsers */
+	
+}
+
+.container-img-pokemon {
+	order: 2;
+	flex: 1;
+	padding: 25px 25px 25px 0;
+	height: 400px;
+}
+
+.container-img-pokemon img {
+	height: 100%;
+	width: 100%;
+}
+
+.container-info-pokemon {
+	display: flex;
+	flex-direction: column;
+
+	order: 1;
+	flex: 1;
+}
+
+.container-info-pokemon h1 {
+	text-align: right;
+	font-size: 60px;
+	color: #eeeeee
+}
+
+.info-pokemon {
+	display: flex;
+	justify-content: space-between;
+
+	margin-top: 20px;
+}
+
+.group-info{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	color: #eeeeee
+}
+
+.group-info p {
+	font-weight: 700;
+	font-size: 20px;
+	color: #eeeeee
+}
+
+/* Stats */
+.container-stats {
+	display: flex;
+	gap: 50px;
+	align-items: center;
+}
+
+.stats {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	flex: 1;
+}
+
+.stat-group {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.stat-group span {
+	flex: 20%;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.progress-bar {
+	width: 100%;
+	height: 30px;
+	
+	background: #1E9600;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	border-radius: 10px;
+}
+/* Search Page */
+
+.p-search{
+	margin-bottom: 30px;
+	font-size: 22px;
+}
+
+.p-search span{
+	font-weight: 700;
+}
+
+/* Loader */
+
+.container-loader{
+	display: flex;
+	justify-content: center;
+	margin: 200px 0;
+}
+
+/* Btn Load More */
+
+.container-btn-load-more{
+	display: flex;
+	justify-content: center;
+
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.btn-load-more{
+	border: none;
+	padding: 15px 40px;
+	font-family: inherit;
+	background: #06beb6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #48b1bf, #06beb6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #48b1bf, #06beb6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	color: #fff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.btn-load-more:hover{
+	background-color: var(--color-primary-hover);
+	color: #000;
+}
+
+/* -----------------
+--------FOOTER--------
+----------------------*/
+
+footer{
+	background: #2980B9;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+	text-align: start;
+	margin-bottom: 0;
+  }
+  
+  .footer-container{
+	display: inline-flex;
+	margin-left: 2rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.2rem;
+  }
+  
+  .footer-item{
+	list-style: none;
+  }
+  
+  .footer-item a{
+	color: black;
+	font-size: 15px;
+  }
+  
+  .footer-item a:hover{
+	color: aliceblue;
+  }
