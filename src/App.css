@@ -1,31 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
 
-:root {
-	--color-fire: #ff7402;
-	--color-grass: #9bcc50;
-	--color-steel: #9eb7b8;
-	--color-water: #4592c4;
-	--color-psychic: #f366b9;
-	--color-ground: #ab9842;
-	--color-ice: #51c4e7;
-	--color-flying: #3dc7ef;
-	--color-ghost: #4d5b64;
-	--color-normal: #a4acaf;
-	--color-poison: #7e0058;
-	--color-rock: #a38c21;
-	--color-fighting: #d56723;
-	--color-dark: #707070;
-	--color-bug: #729f3f;
-	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
-	--color-electric: #bba909;
-	--color-fairy: #fdb9e9;
-	--color-shadow: #7b62a3;
-	--color-unknow: #757575;
-
-	--color-primary: #006d77;
-	--color-primary-hover: #83c5be;
-}
-
 * {
 	margin: 0;
 	padding: 0;
@@ -33,9 +7,9 @@
 }
 
 body{
-	background: #000000;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #232526;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to bottom, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to bottom, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	
 }
 
@@ -74,7 +48,7 @@ header form {
 	align-items: center;
 	gap: 10px;
 
-	border: 1px solid #555;
+	border: 1px solid #0c0c0c;
 	padding: 15px 20px;
 	border-radius: 25px;
 }
@@ -86,14 +60,14 @@ header form {
 	border: none;
 	outline: none;
 	font-size: 15px;
-	background-color: #000;
+	background-color: #414345;
 	color: #ffffff;
 }
 
 .icon-search {
 	width: 20px;
 	height: 20px;
-	stroke: #797979;
+	stroke: #0c0c0c;
 }
 
 .btn-search {
@@ -114,7 +88,6 @@ header form {
 
 .btn-search:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
-	background-color: var(--color-primary-hover);
 	color: #000;
   transition: all 300ms;
 }
@@ -136,7 +109,7 @@ header form {
 .icon-filter .icon {
 	width: 30px;
 	height: 30px;
-	stroke: #555;
+	stroke: #dbdbdb;
 }
 
 /* Card List Pokemon */
@@ -155,7 +128,6 @@ header form {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 5px;
 	height: 200px;
 
 	transition: all 0.5s;
@@ -276,13 +248,13 @@ header form {
 	
 }
 
-.ghost {
+/* .ghost {
 	background-color: var(--color-ghost);
 }
 
 .normal {
 	background-color: var(--color-normal);
-}
+} */
 
 .rock {
 	background: #3C3B3F;  /* fallback for old browsers */
@@ -398,7 +370,7 @@ Styles of Pokemon Single Page
 
 	font-size: 200px;
 	font-weight: 700;
-	color: #2193b0;  /* fallback for old browsers */
+	color: #f3f6f7;  /* fallback for old browsers */
 	
 }
 
@@ -527,7 +499,6 @@ Styles of Pokemon Single Page
 }
 
 .btn-load-more:hover{
-	background-color: var(--color-primary-hover);
 	color: #000;
 }
 
