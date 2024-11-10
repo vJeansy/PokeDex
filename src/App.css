@@ -53,6 +53,12 @@ header form {
 	border-radius: 25px;
 }
 
+@media (max-width: 440px) {
+	.form-group {
+		padding: 7px 10px;
+	}
+}
+
 .form-group input {
 	/* padding: 15px 30px; */
 	font-family: inherit;
@@ -62,6 +68,16 @@ header form {
 	font-size: 15px;
 	background-color: #414345;
 	color: #ffffff;
+}
+
+@media (max-width: 670px) {
+	.form-group input {
+		width: 100px;
+	} @media (max-width: 440px) {
+		.form-group input {
+			width: 25px;
+		}
+	}
 }
 
 .icon-search {
@@ -84,6 +100,12 @@ header form {
 	cursor: pointer;
 	font-weight: 500;
 	letter-spacing: 2px;
+}
+
+@media (max-width: 440px) {
+	.btn-search {
+		padding: 5px 15px;
+	}
 }
 
 .btn-search:hover {
@@ -117,6 +139,18 @@ header form {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 22px;
+}
+
+@media (max-width: 900px) {
+	.card-list-pokemon {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 22px;
+	} @media (max-width: 500px) {
+		.card-list-pokemon {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 22px;
+		}
+	}
 }
 
 .card-pokemon {
