@@ -5,7 +5,7 @@ import { HomePage, PokemonPage, SearchPage } from './pages';
 export const AppRouter = () => {
 	return (
 		<Routes>
-			<Route path='/' element={<Navegation />}>
+			<Route basename='/PokeDex' path='/' element={<Navegation />}>
 				{ /*<Route path="pokemon/:id" element={<PokemonInfo />}/> */}
 				<Route index element={<HomePage />} />
 				<Route path='pokemon/:id' index element={<PokemonPage />} />
