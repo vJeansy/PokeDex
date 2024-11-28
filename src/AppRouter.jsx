@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 import { Navegation } from './components';
 import { HomePage, PokemonPage, SearchPage } from './pages';
 
@@ -8,11 +8,11 @@ export const AppRouter = () => {
 			<Route path='/' element={<Navegation />}>
 				{ /*<Route path="pokemon/:id" element={<PokemonInfo />}/> */}
 				<Route index element={<HomePage />} />
-				<Route path='pokemon/:id' index element={<PokemonPage />} />
+				<Route path='pokemon/:id' element={<PokemonPage />} />
 				<Route path='search' element={<SearchPage />} />
 			</Route>
 
-            {/*<Route path='*' element={<Navigate to='/' />} />*/}
+            <Route path='*' element={<Navigate to='/' />} />
 		</Routes>
 	);
 };
