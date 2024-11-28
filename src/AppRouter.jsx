@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Navegation } from './components';
 import { HomePage, PokemonPage, SearchPage } from './pages';
 
@@ -12,7 +12,7 @@ export const AppRouter = () => {
 				<Route path='search' element={<SearchPage />} />
 			</Route>
 
-            <Route path='*' element={<Navigate to='/' />} />
+            {/*<Route path='*' element={<Navigate to='/' />} />*/}
 		</Routes>
 	);
 };
