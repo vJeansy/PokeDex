@@ -8,8 +8,8 @@ export const AppRouter = () => {
 			<Route path='/' element={<Navegation />}>
 				{ /*<Route path="pokemon/:id" element={<PokemonInfo />}/> */}
 				<Route index element={<HomePage />} />
-				<Route path='pokemon/:id' element={<PokemonPage />} />
-				<Route path='search' element={<SearchPage />} />
+				<Route path='/pokemon/:id' element={<PokemonPage />} />
+				<Route path='/search' element={<SearchPage />} />
 			</Route>
 
             <Route path='*' element={<Navigate to='/' />} />
